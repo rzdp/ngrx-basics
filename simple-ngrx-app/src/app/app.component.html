@@ -1,0 +1,20 @@
+<h2>Social Media</h2>
+<hr>  
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Creator</th>
+    </tr>
+    <tr *ngFor="let socialMedia of socialMedias$ | async">
+      <td>{{ socialMedia.name }}</td>
+      <td>{{ socialMedia.url }}</td>
+      <td>{{ socialMedia.creator }}</td>
+    </tr>
+  </table>
+
+<input type="text" name="name" #name>
+<input type="text" name="url" #url>
+<input type="text" name="creator" #creator>
+
+<button (click)="saveSocialMedia(name, url, creator)">Save</button>
